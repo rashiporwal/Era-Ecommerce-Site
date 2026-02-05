@@ -1,0 +1,138 @@
+
+/* 
+About page styling */
+
+
+
+
+#page-header.about-header{
+    background-image: url("./Images/about/banner.png");
+    box-shadow: 4px 4px 4px black;
+    height: 350px;
+    mix-blend-mode: hard-light;
+}
+
+#about-head{
+    display: flex;
+    align-items: center;
+}
+
+#about-head img{
+    width: 50%;
+    height: auto;
+}
+
+#about-head div{
+     padding-left: 40px;
+}
+
+marquee{
+    height: 50%;
+
+}
+
+.marquee-scroller marquee i{
+    z-index: -1;
+    height: 100%;
+    margin: 20px 5px 20px 5px;
+    align-items: center;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+marquee i{
+    width: 40px;
+    border: 2px  rgb(5, 79, 3);
+    border-style: double;
+    padding: 10px 10px 10px 10px;
+    box-shadow: 2px 1px 4px rgb(1, 33, 1);
+    font-size: 15px;
+    color: rgb(227, 142, 193);
+    margin: 0 1px;
+    border-radius: 5%;
+    /* transform: rotate(-0deg); */
+    animation: wave 2s ease-in-out infinite;
+}
+
+marquee i:nth-child(1) { animation-delay: 0s; } marquee i:nth-child(2) { animation-delay: 0.1s; } marquee i:nth-child(3) { animation-delay: 0.2s; } marquee i:nth-child(4) { animation-delay: 0.3s; } marquee i:nth-child(5) { animation-delay: 0.4s; } marquee i:nth-child(6) { animation-delay: 0.5s; } marquee i:nth-child(7) { animation-delay: 0.6s; } marquee i:nth-child(8) { animation-delay: 0.7s; }
+marquee i:nth-child(9) { animation-delay: 0s; } marquee i:nth-child(10) { animation-delay: 0.1s; } marquee i:nth-child(11) { animation-delay: 0.2s; } marquee i:nth-child(12) { animation-delay: 0.3s; } marquee i:nth-child(13) { animation-delay: 0.4s; } marquee i:nth-child(14) { animation-delay: 0.5s; } marquee i:nth-child(15) { animation-delay: 0.6s; } marquee i:nth-child(16) { animation-delay: 0.7s; }
+marquee i:nth-child(17) { animation-delay: 0.1s; } marquee i:nth-child(18) { animation-delay: 0.2s; } marquee i:nth-child(19) { animation-delay: 0.3s; } marquee i:nth-child(20) { animation-delay: 0.4s; } marquee i:nth-child(21) { animation-delay: 0.5s; } marquee i:nth-child(22) { animation-delay: 0.6s; } marquee i:nth-child(23) { animation-delay: 0.7s; }
+marquee i:nth-child(24) { animation-delay: 0.1s; } marquee i:nth-child(25) { animation-delay: 0.2s; } marquee i:nth-child(26) { animation-delay: 0.3s; } marquee i:nth-child(27) { animation-delay: 0.4s; } marquee i:nth-child(28) { animation-delay: 0.5s; } marquee i:nth-child(29) { animation-delay: 0.6s; } marquee i:nth-child(30) { animation-delay: 0.7s; }
+marquee i:nth-child(31) { animation-delay: 0.6s; } marquee i:nth-child(32) { animation-delay: 0.7s; }
+
+
+
+@keyframes wave{
+    0% { transform: translateY(0px); }
+    25% { transform: translateY(-15px); } 
+    50% { transform: translateY(0px); } 
+    75% { transform: translateY(12px); } 
+    100% { transform: translateY(0px); }
+}
+
+.line{
+    box-shadow: 2px 2px 5px 2px rgb(4, 25, 4);
+}
+
+
+#about-app{
+    text-align: center;
+}
+
+
+#about-app .video{
+    width: 70%;
+    height: 100%;
+    margin: 30px auto 0 auto;
+    box-shadow: 6px 1px 40px 1px;
+    border-radius: 25px;
+    
+}
+
+#about-app .video video{
+    width: 100%;
+    height: 80%;
+    border-radius: 20px;
+    mix-blend-mode: darken;
+}
+
+
+
+
+@media (max-width: 477px){
+    #about-head {
+        flex-direction: column;
+    }
+
+    #about-head img {
+    width: 100%;
+    box-shadow: 2px 2px 20px 1px;
+}
+
+
+    #about-app .video {
+        width: 100%;
+    
+}
+
+    marquee {
+    
+    width: 100%;
+}   
+    #about-head div {
+        padding-left: 0px;
+    }
+
+    #feature {
+       display: grid;
+       grid-template-columns: repeat(2,max-content);
+    }
+
+    footer {
+       margin-bottom: 120px;
+    }
+
+    footer .copyright p {
+       text-align: center;
+}
+}

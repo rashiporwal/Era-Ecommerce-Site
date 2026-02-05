@@ -1,0 +1,992 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap');
+/* 
+1. CSS reset + base style setup */
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Maven Pro", sans-serif;
+    font-style: normal;
+    font-optical-sizing: auto;
+    /* font-weight: <weight>; */
+}
+
+h1{
+    font-size: 50px;
+    line-height: 64px;
+    color: #222;
+}
+
+h2{
+    font-size: 46px;
+    line-height: 54px;
+    color: #222;
+}
+
+h4{
+    font-size: 20px;
+    color: #222;
+}
+
+h6{
+    font-weight: 400;
+    font-size: 12px;
+    text-shadow: 2px 0px 4px  rgb(92, 69, 69);
+}
+
+p{
+    font-size: 16px;
+    color: #2e3934;
+    margin: 15px 0 20px 0;
+    text-shadow: 2px 0px 1px  rgb(248, 243, 243);
+}
+
+.section-p1{
+    padding: 40px 80px;
+}
+
+.section-m1{
+    margin: 40px 0;
+}
+/* 
+Global button styling */
+
+button.normal{
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: #fff;
+    background-color: #222;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+    text-shadow: 0px 0px 2px  rgb(253, 253, 253);
+    box-shadow: 2px 2px 20px white;
+}
+
+body{
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+.logo{
+    padding: 0;
+    margin: 0;
+    box-shadow: 2px 2px 4px rgb(232, 218, 221);
+    border-radius: 5px;
+    background-color: rgb(240, 129, 147);
+}
+
+/* header start */
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background : linear-gradient(135deg , pink , rgb(239, 108, 130) );
+    box-shadow: 0 5px 15px rgba(0,0,0,2);
+    position: sticky;  
+    /* this position makes navbar sticky with top:0 and left :0*/
+    top: 0;
+    left: 0;
+    z-index: 999;
+
+}
+
+/*2. navbar-styling-started */
+
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar li{
+    list-style: none;
+    text-decoration: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+#navbar li a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(245, 205, 212);
+    text-shadow: 2px 1px 4px rgb(230, 25, 59) ;
+    transition: 0.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active{
+    color: whitesmoke;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after{
+    content:"";
+    width:40%;
+    height:2px;
+    background: rgb(245, 205, 212);
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+    transition: 0.3s ease-in-out ;
+    
+}
+
+/* this to hide hamburger with bag from large screen */
+#mobile{
+    display: none;
+    align-items: center;
+}
+
+#close{
+    display: none;
+}
+
+/* 
+ navbar ended */
+
+
+/*3. Home page started */
+
+#hero{
+   background-image:url("./Images/hero.png");
+   height: 90vh;
+   width: 100%;
+   background-size: cover;
+   background-position: top 25% right 0;
+   padding: 0 80px;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   justify-content: center;
+   position: relative;
+   
+}
+ 
+#hero::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: inherit;
+    filter: drop-shadow(20px 0px 10px rgb(170, 156, 158));
+    z-index: -1;
+    
+}
+
+#hero h4{
+    padding-bottom: 15px;
+    text-shadow: 1px 0px 0px  rgb(205, 110, 110);
+    
+}
+
+#hero h1{
+    color: #088178;
+    text-shadow: 0px 2px 2px black;
+}
+
+#hero button{
+    background-color:  #39b4ab;
+    color: #088178;
+    text-shadow: 1px 0px 2px  rgb(46, 21, 21);
+    border: 0;
+    padding: 12px 55px 12px 65px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 20px;
+    border-radius: 5px;
+    box-shadow: 4px 2px 17px 3px black;
+    
+}
+
+#hero button i{
+    color: rgb(231, 231, 128);
+    text-shadow: 3px 2px 2px  rgb(21, 14, 14);
+    margin-left: 10px;
+}
+
+#hero button:hover{
+    color:rgb(232, 232, 124);
+    text-shadow:1px 0px 2px  rgb(46, 21, 21); 
+    background-color: pink;
+    transition: 0.3s ease-in;
+    
+}
+
+.hori-line{
+    text-shadow: 3px 2px 2px  rgb(103, 64, 64);
+    border-color: #222;
+    box-shadow: 0px 0px 12px 2px rgb(213, 182, 182);
+}
+
+/* Here, hero section styling ended */
+
+/* 
+Feature section started */
+
+#feature{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#feature .feature-box{
+   width: 200px;
+   text-align: center;
+   padding: 25px 15px;
+   box-shadow: 20px 20px 35px rgba(125, 86, 114, 0.467);
+   border: 1px solid #cce7d0;
+   border-radius: 4px;
+   margin: 15px 0;
+   filter: drop-shadow(10px 2px 10px rgba(156, 128, 132, 0.915));
+
+   
+}
+
+#feature .feature-box:hover{
+    box-shadow: 0px 0px 10px pink;
+}
+
+#feature .feature-box img{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#feature .feature-box h6{
+    display: inline-block;
+    padding: 9px 8px 6px 8px;
+    line-height: 1;
+    border-radius: 4px;
+    color: #088178;
+    background-color: #fddde4;
+}
+
+#feature .feature-box:nth-child(2){
+    background-color: rgb(241, 206, 212);
+    mix-blend-mode: multiply;
+    border: 5px ;
+}
+
+/*  
+  features-section styling ended here */
+
+/* Products-section started from here */
+
+
+#product1{
+    text-align: center;
+}
+
+#product1 h2{
+    text-shadow: 2px 0px 0px #eadbdb;
+}
+
+#product1 .pro-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+#product1 .pro{
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid #cce7d0; 
+    /* stylist border is added here around product1 container*/
+    border-radius: 15px;
+    cursor: pointer;
+    margin: 15px 0;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.234);
+    transition: all 0.3s ease;
+    position: relative;
+    filter: drop-shadow(10px 2px 10px rgba(156, 128, 132, 0.915));
+}
+
+#product1 .pro:hover{
+    box-shadow: 20px 20px 30px rgba(212, 109, 162, 0.462);
+    filter: drop-shadow(10px 2px 5px rgba(156, 128, 132, 0.348));
+    transform: rotateY(5deg) rotateX(5deg) scale(1.13);
+}
+
+#product1 .pro img{
+    width: 100%;
+    border-radius: 20px;
+}
+
+#product1 .pro .des{
+    text-align: start;
+    padding: 10px 0;
+}
+
+#product1 .pro .des span{
+    color: #0606063;
+}
+
+#product1 .pro .des h5{
+    padding-top: 7px;
+    color: #1a1a1a;
+    font-size: 14px;
+    text-shadow: 1px 0px 2px  rgb(104, 97, 97);
+}
+
+#product1 .pro .des i{
+    font-size: 12px;
+    color: rgb(243,181,25);
+}
+
+#product1 .pro .des h4{
+    padding-top: 7px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #088178;
+}
+
+#product1 .pro .cart{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 25px;
+    font-weight: 500;
+    color: #088178;
+    border: 1px solid #cce7d0;
+    padding: 10px;
+    background-color: #e8f6ea;
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+    transform: rotateY(5deg) rotateX(5deg) scale(1.13);
+    transition: all 0.3s ease;
+}
+
+#product1 .pro .cart:hover{
+    background-color: #088178;
+    color: #fff;
+    transform: rotateY(0deg) rotateX(0deg) scale(1.2);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+#product1 .pro .cart:active{
+    transform: scale(0.95);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+ /* Product showing section styling is over here */
+
+/* banner styling started here */
+
+#banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url("./Images/banner/b2.jpg");
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
+    mix-blend-mode: exclusion;
+    box-shadow: 20px 2px 20px white;
+}
+
+#banner h4{
+    color: #222;
+    font-size: 16px;
+    padding: 10px 0;
+    text-shadow: 2px 3px 3px aliceblue;
+}
+
+#banner h2 span{
+    color: #ef3636;
+    text-shadow: 2px 2px 2px white;
+}
+
+#banner h2{
+    color: black ;
+    text-shadow: 2px 2px 2px rgb(255, 255, 255);
+    padding: 20px;
+}
+
+#banner button:hover{
+    background-color: #4539b4;
+    text-shadow: 1px 1px 1px white;
+    color: #070707;
+    transform: rotateY(5deg) rotateX(5deg) scale(1.13);
+}
+
+/* banner section ended */
+
+/* new arrival section ended  */
+
+/* 7. new banner for advertising sponsers section styling started here*/
+#sm-banner{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#sm-banner .banner-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url("./Images/banner/b17.jpg");
+    min-width: 600px;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+    box-shadow: 2px 2px 20px #222;
+}
+
+#sm-banner .banner-box2{
+    background-image: url("./Images/banner/b10.jpg");
+}
+
+
+#sm-banner h4{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+#sm-banner h2{
+    color: #fff;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+#sm-banner span{
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 15px;
+}
+
+#sm-banner .white{
+    font-size: 13px;
+    font-weight: 600;
+    padding: 11px 18px;
+    color: #222;
+    border-radius: 4px;
+    background: none;
+    cursor: pointer;
+    border: 2px solid whitesmoke;
+    outline: none;
+    transition: 0.2s;
+    text-shadow: 0px 0px 2px  rgb(15, 7, 7);
+    box-shadow: 2px 2px 20px white;
+}
+
+#sm-banner .banner-box:hover button{
+    background: #088178;
+    border: 1px solid #088178;
+    color: #fddde4;
+}
+
+#banner3{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 80px;
+}
+
+#banner3 .banner-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url("./Images/banner/b7.jpg");
+    min-width: 30%;
+    height: 30vh;
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+    box-shadow: 2px 2px 20px #222;
+    margin-bottom: 20px;
+    
+}
+
+#banner3 .banner-box3{
+    background-image: url("./Images/banner/b18.jpg");
+}
+
+#banner3 .banner-box4{
+    background-image: url("./Images/banner/b16.jpg");
+}
+
+
+#banner3 h2{
+    color: #fff;
+    font-weight: 900;
+    font-size: 22px;
+}
+
+#banner3 h3{
+    color: #e93636;
+    font-weight: 800;
+    font-size: 15px;
+}
+
+/* Here banner section has ended */
+
+/* Newsletter section started */
+
+#Newsletter{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-image: url("./Images/banner/b14.png");
+    background-repeat: no-repeat;
+    background-position: 20% 30%;
+    background-color: pink;
+    box-shadow: 2px 2px 10px black;
+}
+
+#Newsletter h4{
+    font-size: 25px;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 3px 0px 2px #222;
+}
+
+#Newsletter p{
+    font-size: 16px;
+    font-weight: 600;
+    color: #54b062;
+    text-shadow: 0px 1px 1px black;
+}
+
+/* this style combine both email placeholder and button */
+#Newsletter .form{
+    display: flex;
+    width: 40%;
+}
+
+#Newsletter p span{
+    color: rgb(232, 232, 29);
+}
+
+#Newsletter input{
+    height: 3.125rem;
+    padding: 0 1.25rem;
+    font-size: 14px;
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    outline: none;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+
+#Newsletter button{
+    background-color: #099178;
+    color: #fff;
+    white-space: nowrap;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+
+}
+
+#Newsletter button:hover{
+    background-color: pink;
+    color: #1a1a1a;
+    transition: all ease 0.2s;
+}
+
+/* footer styling started from here */
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background : linear-gradient(135deg , pink , rgb(239, 108, 130) );
+    box-shadow: 0px 0px 10px black;
+}
+
+footer .col{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+footer .logo{
+    margin-bottom: 30px;
+}
+
+footer .col h2{
+    text-shadow: 3px 2px 2px whitesmoke;
+}
+
+footer h4{
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+
+footer p{
+    font-size: 13px;
+    margin: 0 0 8px 0;
+}
+
+footer a{
+    font-size: 13px;
+    text-decoration: none;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+footer .follow{
+    margin-top: 20px;
+}
+
+footer .follow i{
+    color: #465b52;
+    padding-right: 4px;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+footer .install .row a img{
+    border: 1px solid #099178;
+    border-radius: 6px;
+}
+
+footer .install img{
+    margin: 10px 0 15px 0;
+}
+
+footer .follow i:hover,
+footer a:hover{
+    color: #b0eeea;
+    text-shadow: 1px 1px 1px black;
+}
+
+footer .copyright{
+    width: 100%;
+    text-align: center;
+}
+
+footer .copyright p{
+    color: aliceblue;
+    text-shadow: 1px 1px 1px black;
+    font-size: 14px;
+}
+
+/* Here footer part is ended */
+
+
+
+/* Here reponsiveness start taking place in the picture */
+/* start media query */
+
+@media (max-width:768px){
+    .section-p1{
+        padding: 40px 40px;
+    }
+
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        height: 100vh;
+        width: 300px;
+        background-color: pink;
+        box-shadow: 0 40px 60px rgba(0,0,0,0.1);
+        padding: 80px 0 0 10px;
+        transition: 0.3s;
+    }
+
+    #navbar.active{
+        right: 0px;
+    }
+
+    #navbar li{
+        margin-bottom: 25px;
+    }
+
+    #mobile{
+    display: flex;
+    align-items: center;
+    }
+
+    #mobile i{
+        color: peachpuff;
+        font-size: 24px;
+        padding-left: 20px;
+    }
+    
+
+    /* this close id for closing the sidebar */
+    #close{
+        display: initial;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        color: #222;
+        font-size: 24px;
+    }
+
+    #lg-bag{
+        display: none;
+    }
+
+    #hero {
+        height: 70vh;
+        padding: 0 80px;
+        background-position: top 30% right 40%;
+    }
+
+    #feature {
+        justify-content: space-between;
+    }
+    #feature .feature-box {
+        box-shadow: 20px 20px 35px rgba(125, 86, 114, 0.467);
+        border: 1px solid #cce7d0;
+        border-radius: 4px;
+        filter: drop-shadow(10px 2px 10px rgba(156, 128, 132, 0.915));
+    }
+
+    #product1 .pro-container {
+        justify-content: center;
+    }
+
+    #product1 .pro {
+        border: 1px solid #cce7d0;
+        border-radius: 15px;
+        cursor: pointer;
+        margin: 15px;
+        box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.234);
+        transition: all 0.3s ease;
+        filter: drop-shadow(10px 2px 10px rgba(156, 128, 132, 0.915));
+    }
+
+    #banner {
+        height: 35vh;
+        background-size: cover;
+        background-position: center;
+        mix-blend-mode: exclusion;
+        box-shadow: 20px 2px 20px white;
+    }
+
+    #sm-banner .banner-box {
+        min-width: 100%;
+        height: 32vh;
+        background-size: cover;
+        background-position: center;
+        box-shadow: 2px 2px 20px #222;
+    }  
+    #banner3 {
+        padding: 0 40px;
+    }
+
+    #banner3 .banner-box {
+        width: 28%;
+        background-size: cover;
+        background-position: center;
+        box-shadow: 2px 2px 20px #222;
+    }
+
+    #Newsletter .form {
+        width: 70%;
+    }
+
+}
+
+/* This is ended for tablet screen device  */
+
+/* Now , set media queries for mobile screen devices */
+
+@media (max-width:477px){
+    #header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 10px 30px;
+        z-index: 999;
+        background-color: #fff;
+        box-shadow: 0,0,0,0.1;
+    }
+
+    #hero {
+        background-position: 55%;
+        padding: 0 20px ;
+    
+    }   
+ 
+    h2 {
+        font-size: 32px;
+    
+    }
+   
+    h1 {
+        font-size: 38px;
+    
+    }
+
+    #hero button {
+    padding: 12px 25px 12px 25px;
+    
+}
+    
+    #feature{
+        justify-content: space-between;
+    }
+
+    #feature .feature-box {
+    width: 155px;
+    margin: 0 0 15px 0;
+}   
+
+    #product1 .pro {
+    width: 100%;
+}
+    
+/* Banner adjustments */
+
+    #banner,
+    #sm-banner .banner-box,
+    #sm-banner .banner-box2,
+    #banner3 .banner-box{
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    #banner{
+        height: 35vh;
+        width: 90%;
+    }
+
+    #sm-banner .banner-box{
+        height: 40vh;
+        width: 90%;
+    }
+
+    #sm-banner .banner-box2{
+        margin-top: 20px;
+        width: 90%;
+    }
+
+    #banner3 {
+        padding: 0 20px;
+    }
+
+    #banner3 .banner-box{
+        width: 90%;
+    }
+
+    #Newsletter {
+        padding: 40px 20px;
+}
+ 
+    #Newsletter .form {
+    width: 100%;
+}
+
+    footer .copyright {
+    text-align: start;
+}
+    
+}
+
+/* Extra small devices (iphone4 , very small Androids) */
+
+@media (max-width: 360px) {
+  .section-p1 {
+    padding: 20px;
+  }
+
+  #navbar {
+    width: 240px; 
+    padding: 60px 0 0 10px;
+  }
+
+  #navbar li {
+    margin-bottom: 18px; 
+  }
+
+  #hero {
+    height: 60vh;
+    padding: 0 20px; 
+    background-position: center top; 
+  }
+
+  h1 {
+    font-size: 24px; 
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  #feature {
+    flex-direction: column; 
+    align-items: center;
+  }
+
+
+  #feature .feature-box {
+    width: 90%; 
+    margin-bottom: 15px;
+  }
+
+  #product1 .pro-container {
+    flex-direction: column; 
+    align-items: center;
+  }
+
+  #product1 .pro {
+    width: 90%; 
+    margin: 10px 0;
+  }
+
+  #banner {
+    height: 20vh;
+    box-shadow: none; 
+  }
+
+  #sm-banner .banner-box {
+    height: 25vh;
+    min-width: 100%;
+  }
+
+  #banner3 {
+    padding: 0 10px;
+  }
+
+  #banner3 .banner-box {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  #Newsletter .form {
+    width: 100%;
+  }
+
+  #mobile i {
+    font-size: 20px; 
+    padding-left: 10px;
+  }
+
+  #close {
+    top: 20px;
+    left: 20px;
+    font-size: 20px;
+  }
+}
