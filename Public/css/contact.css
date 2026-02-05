@@ -1,7 +1,7 @@
 
 
 #page-header.contact-header{
-    background-image: url("./Images/about/banner.png");
+    background-image: url("../Images/about/banner.png");
     box-shadow: 4px 2px 4px rgb(255, 255, 255);
     height: 350px;
     mix-blend-mode: difference;

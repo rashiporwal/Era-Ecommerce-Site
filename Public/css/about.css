@@ -6,7 +6,7 @@ About page styling */
 
 
 #page-header.about-header{
-    background-image: url("./Images/about/banner.png");
+    background-image: url("../Images/about/banner.png");
     box-shadow: 4px 4px 4px black;
     height: 350px;
     mix-blend-mode: hard-light;

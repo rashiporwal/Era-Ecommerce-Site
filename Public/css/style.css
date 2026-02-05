@@ -154,7 +154,7 @@ body{
 /*3. Home page started */
 
 #hero{
-   background-image:url("./Images/hero.png");
+   background-image:url("../Images/hero.png");
    height: 90vh;
    width: 100%;
    background-size: cover;
@@ -386,7 +386,7 @@ Feature section started */
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-image: url("./Images/banner/b2.jpg");
+    background-image: url("../Images/banner/b2.jpg");
     width: 100%;
     height: 40vh;
     background-size: cover;
@@ -437,7 +437,7 @@ Feature section started */
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    background-image: url("./Images/banner/b17.jpg");
+    background-image: url("../Images/banner/b17.jpg");
     min-width: 600px;
     height: 50vh;
     background-size: cover;
@@ -447,7 +447,7 @@ Feature section started */
 }
 
 #sm-banner .banner-box2{
-    background-image: url("./Images/banner/b10.jpg");
+    background-image: url("../Images/banner/b10.jpg");
 }
 
 
@@ -503,7 +503,7 @@ Feature section started */
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    background-image: url("./Images/banner/b7.jpg");
+    background-image: url("../Images/banner/b7.jpg");
     min-width: 30%;
     height: 30vh;
     background-size: cover;
@@ -515,11 +515,11 @@ Feature section started */
 }
 
 #banner3 .banner-box3{
-    background-image: url("./Images/banner/b18.jpg");
+    background-image: url("../Images/banner/b18.jpg");
 }
 
 #banner3 .banner-box4{
-    background-image: url("./Images/banner/b16.jpg");
+    background-image: url("../Images/banner/b16.jpg");
 }
 
 
@@ -544,7 +544,7 @@ Feature section started */
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
-    background-image: url("./Images/banner/b14.png");
+    background-image: url("../Images/banner/b14.png");
     background-repeat: no-repeat;
     background-position: 20% 30%;
     background-color: pink;
